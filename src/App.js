@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import SliderComponent from './components/slider.component';
+
 
 function App() {
+  const homeWinners = [
+    {
+      winnerImg:'https://images.pexels.com/photos/12733781/pexels-photo-12733781.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load',
+      itemImg:'https://images.pexels.com/photos/12733781/pexels-photo-12733781.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load',
+      winnerName:'Person With Long Name',
+      driveName:'Cool Charity Drive',
+      itemName:'Millions of Dollars'
+    }]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <SliderComponent data={homeWinners}/>
+    </>
   );
 }
 
